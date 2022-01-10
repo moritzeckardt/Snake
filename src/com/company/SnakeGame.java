@@ -87,7 +87,7 @@ public class SnakeGame extends AudGameWindow {
     @Override
     public void updateGame(long time) {
         // Check if step is necessary
-        while (time - lastSnakeUpdate > STEP_TIME) {
+        while (time - lastSnakeUpdate >= STEP_TIME) {
             snake.step();
             checkCollisions();
             lastSnakeUpdate += STEP_TIME;
